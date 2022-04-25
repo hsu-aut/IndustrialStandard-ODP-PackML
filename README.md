@@ -9,7 +9,7 @@ This repository contains an ontology of ISA88 which is a standard to describe pr
  - [VDI 2860](https://github.com/hsu-aut/IndustrialStandard-ODP-VDI2860)
  - [VDI 3682](https://github.com/hsu-aut/IndustrialStandard-ODP-VDI3682)
  - [DIN 8580](https://github.com/hsu-aut/IndustrialStandard-ODP-DIN8580)
- - [ISA 88](https://github.com/hsu-aut/IndustrialStandard-ODP-ISA88)
+ - [DIN EN 61360](https://github.com/hsu-aut/IndustrialStandard-ODP-DINEN61360)
  - [WADL](https://github.com/hsu-aut/IndustrialStandard-ODP-WADL)
  - [DIN EN 62264-2](https://github.com/hsu-aut/IndustrialStandard-ODP-DINEN62264-2)
  - [OPC UA](https://github.com/hsu-aut/IndustrialStandard-ODP-OPC-UA)
