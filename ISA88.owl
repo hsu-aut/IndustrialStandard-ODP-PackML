@@ -8,6 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88">
         <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88/2.0.0"/>
+        <rdfs:isDefinedBy>ANSl/ISA-TR88.00.02-2015</rdfs:isDefinedBy>
         <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -113,6 +114,9 @@
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The ABORT command can be triggered at any time in order bring the state machine into ABORTING state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -127,8 +131,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-The machine maintains status information relevant to the ABORT condition. The machine can only exit the ABORTED state after an explicit CLEAR command, subsequently to manual intervention to correct and reset the detected machine faults.
+        <rdfs:comment>The machine maintains status information relevant to the ABORT condition. The machine can only exit the ABORTED state after an explicit CLEAR command, subsequently to manual intervention to correct and reset the detected machine faults.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -145,8 +148,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortingStateComplete"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-The ABORTING state can be entered at any time in response to the ABORT command or on the occurrence of a machine fault. The aborting logic will bring the machine to a rapid safe stop.
+        <rdfs:comment>The ABORTING state can be entered at any time in response to the ABORT command or on the occurrence of a machine fault. The aborting logic will bring the machine to a rapid safe stop.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -163,6 +165,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>After the ABORTING logic has brought the machine to a safe stop, the ABORTING STATE COMPLETE transition will fire so that the machine ends in ABORTED state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -171,8 +176,8 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
-        <rdfs:comment>Description:
-A state which represents some processing activity. It implies the single or repeated execution of processing steps in a logical order, for a finite time or until a specific condition has been reached. In ANSl/lSA-88.00.01 these are referred to transient states, those states ending in &quot;ING&quot;.
+        <owl:disjointWith rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+        <rdfs:comment>A state which represents some processing activity. It implies the single or repeated execution of processing steps in a logical order, for a finite time or until a specific condition has been reached. In ANSl/lSA-88.00.01 these are referred to transient states, those states ending in &quot;ING&quot;.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -189,6 +194,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The CLEAR command may be used to clear faults that may have occurred during ABORTING in order to move to the STOPPED state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -210,8 +218,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-Initiated by a state command to clear faults that may have occurred when ABORTING, and are present in the ABORTED state before proceeding to a STOPPED state.
+        <rdfs:comment>Initiated by a state command to clear faults that may have occurred when ABORTING, and are present in the ABORTED state before proceeding to a STOPPED state.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -228,6 +235,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as all faults have been cleared during CLEARING, this CLEARING STATE COMPLETE transition will be fired so that the machine ends up in STOPPED state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -236,6 +246,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+        <rdfs:comment>State commands are transitions that need to be actively triggered, e.g., by one of the following ways: Operator intervention, Response to the status of one or more procedural elements, Response to machine conditions, Supervisory or remote system intervention.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -258,8 +271,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-The machine has finished the COMPLETING state and is now waiting for a RESET command before transitioninQ to the RESETTING state.
+        <rdfs:comment>The machine has finished the COMPLETING state and is now waiting for a RESET command before transitioninQ to the RESETTING state.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -284,8 +296,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-This state is an automatic response from the EXECUTE state. Normal operation has run to completion, i.e. processing of material at the infeed will stop.
+        <rdfs:comment>This state is an automatic response from the EXECUTE state. Normal operation has run to completion, i.e. processing of material at the infeed will stop.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -302,6 +313,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the completion logic has been finished, the COMPLETING STATE COMPLETE transition will be triggered. The machine will end in the COMPLETE state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -326,8 +340,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-Once the machine is processing materials it is in the EXECUTE state. Different machine modes will result in specific types of EXECUTE activities. For example, if the machine is in the &quot;Production&quot; mode, the EXECUTE will result in products being produced, while in &quot;Clean Out&quot; mode the EXECUTE state refers to the action of cleanino the machine.
+        <rdfs:comment>Once the machine is processing materials it is in the EXECUTE state. Different machine modes will result in specific types of EXECUTE activities. For example, if the machine is in the &quot;Production&quot; mode, the EXECUTE will result in products being produced, while in &quot;Clean Out&quot; mode the EXECUTE state refers to the action of cleanino the machine.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -344,6 +357,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as normal operation was successfully finished, the machine will trigger the EXECUTE STATE COMPLETE transition to end in the COMPLETING state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -366,8 +382,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description: 
-Refer to HOLDING for when this state is used. In this state the machine shall not produce product. It will either stop running or continue to dry cycle. A transition to the UNHOLDING state will occur when INTERNAL machine conditions change or an UNHOLD command is initiated by an operator.
+        <rdfs:comment>Refer to HOLDING for when this state is used. In this state the machine shall not produce product. It will either stop running or continue to dry cycle. A transition to the UNHOLDING state will occur when INTERNAL machine conditions change or an UNHOLD command is initiated by an operator.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -384,6 +399,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The HOLD command is used to hold production due to internal machine conditions.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -406,8 +424,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description: 
-This state shall be used when INTERNAL (inside this unit machine and not from another machine on the production line) machine conditions do not allow the machine to continue producing, that is, the machine leaves EXECUTE due to internal conditions. This is typically used for routine machine conditions that requires minor operator servicing to continue production. This state can be initiated automatically or by an operator and can be easily recovered from. An example of this would be a machine that requires an operator to periodically refill a glue dispenser or carton magazine and due to the machine design, these operations cannot be performed while the machine is running. Since these types of tasks are normal production operations, it is not desirable to go through aborting or stopping sequences, and because these functions are integral to the machine they are not considered to be &quot;external&quot;. While in the HOLDING state, the machine is typically brought to a controlled stop and then transitions to HELD upon state complete. To be able to restart production correctly after the HELD state, all relevant process set-points and return status of the procedures at the time of receiving the HOLD command must be saved in the machine controller when executing the HOLDING procedure.
+        <rdfs:comment>This state shall be used when INTERNAL (inside this unit machine and not from another machine on the production line) machine conditions do not allow the machine to continue producing, that is, the machine leaves EXECUTE due to internal conditions. This is typically used for routine machine conditions that requires minor operator servicing to continue production. This state can be initiated automatically or by an operator and can be easily recovered from. An example of this would be a machine that requires an operator to periodically refill a glue dispenser or carton magazine and due to the machine design, these operations cannot be performed while the machine is running. Since these types of tasks are normal production operations, it is not desirable to go through aborting or stopping sequences, and because these functions are integral to the machine they are not considered to be &quot;external&quot;. While in the HOLDING state, the machine is typically brought to a controlled stop and then transitions to HELD upon state complete. To be able to restart production correctly after the HELD state, all relevant process set-points and return status of the procedures at the time of receiving the HOLD command must be saved in the machine controller when executing the HOLDING procedure.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -424,6 +441,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Held"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the HOLDING logic has been finished, the HOLDING STATE COMPLETE transition will be triggered and the machine will go into the HELD state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -446,8 +466,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-This is the state which indicates that RESETTING is complete. The machine will maintain the conditions which were achieved during the RESETTING state, and perform operations required when the machine is in IDLE.
+        <rdfs:comment>This is the state which indicates that RESETTING is complete. The machine will maintain the conditions which were achieved during the RESETTING state, and perform operations required when the machine is in IDLE.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -464,6 +483,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A RESET command will cause an exit from STOPPED to the RESETTING state.
+
+ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -486,8 +508,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description: 
-This state is the result of a RESET command from the STOPPED or COMPLETE state. Faults and stop causes are reset. RESETTING will typically cause safety devices to be energized and place the machine in the IDLE state where it will wait for a START command. No hazardous motion should haooen in this state.
+        <rdfs:comment>This state is the result of a RESET command from the STOPPED or COMPLETE state. Faults and stop causes are reset. RESETTING will typically cause safety devices to be energized and place the machine in the IDLE state where it will wait for a START command. No hazardous motion should haooen in this state.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -504,6 +525,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the RESETTING logic has been finished, the RESETTING STATE COMPLETE transition will be triggered and the machine will go into the IDLE state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -518,6 +542,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The START command is the first step to begin execution. It will bring the state machine from IDLE to STARTING state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -540,6 +567,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The machine completes the steps needed to start. This state is entered as a result of a STARTING command (local or remote). Following this command the machine will beqin to &quot;execute&quot;.
+
+ANSl/ISA-TRBB.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -554,13 +584,20 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the STARTING logic has been finished, the STARTING STATE COMPLETE transition will be triggered and the machine will go into the EXECUTE state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#State -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#State">
+        <rdfs:comment>A unit/machine state completely defines the current condition of a machine. Two machine state types are defined: Acting states, which represent some processing activity. And Wait states which are used to identify that a machine has achieved a defined set of conditions.
+
+ANSl/ISA-TR88.00.02-2015</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -568,13 +605,19 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+        <rdfs:comment>A StateComplete is automatically triggered by the completion of an acting state. As a result, the state machine switches its current state to a Wait State.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine"/>
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine">
+        <owl:disjointWith rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+        <rdfs:comment>To be used as a container for all states and transitions of a particular state machine.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -588,6 +631,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The STOP command triggers a controlled halt of a machine trough logic triggered in the STOPPING state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -609,8 +655,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-The machine is powered and stationary after completing the STOPPING state. All communications with other systems are functioning (if applicable). A RESET command will cause an exit from STOPPED to the RESETTING state.
+        <rdfs:comment>The machine is powered and stationary after completing the STOPPING state. All communications with other systems are functioning (if applicable). A RESET command will cause an exit from STOPPED to the RESETTING state.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -634,8 +679,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-This state is entered in response to a STOP command. While in this state the machine executes the logic which brings it to a controlled stop as reflected by the STOPPED state. Normal STARTING of the machine cannot be initiated unless RESETTING had taken place.
+        <rdfs:comment>This state is entered in response to a STOP command. While in this state the machine executes the logic which brings it to a controlled stop as reflected by the STOPPED state. Normal STARTING of the machine cannot be initiated unless RESETTING had taken place.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -652,6 +696,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the STOPPING logic has been finished, the STOPPING STATE COMPLETE transition will be triggered and the machine will go into the STOPPED state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -666,6 +713,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The SUSPEND command is used to suspend production due to external machine conditions.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -688,8 +738,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-Refer to SUSPENDING for when this state is used. In this state the machine
+        <rdfs:comment>Refer to SUSPENDING for when this state is used. In this state the machine
 shall not produce product. It will either stop running or continue to cycle without producing until external process conditions return to normal, at which time, the SUSPENDED state will transition to the UNSUSPENDING state, typically without any operator intervention.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
@@ -715,8 +764,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-This state shall be used when EXTERNAL (outside this unit machine but usually on the same integrated production line) process conditions do not allow the machine to continue producing, that is, the machine leaves EXECUTE due to upstream or downstream conditions on the line. This is typically due to a blocked or starved event. This condition may be detected by a local machine sensor or based on a supervisory system external command. While in the SUSPENDING state, the machine is typically brought to a controlled stop and then transitions to SUSPENDED upon state complete. To be able to restart production correctly after the SUSPENDED state, all relevant process set-points and return status of the procedures at the time of receiving the SUSPEND command must be saved in the machine controller when executing the SUSPENDING procedure.
+        <rdfs:comment>This state shall be used when EXTERNAL (outside this unit machine but usually on the same integrated production line) process conditions do not allow the machine to continue producing, that is, the machine leaves EXECUTE due to upstream or downstream conditions on the line. This is typically due to a blocked or starved event. This condition may be detected by a local machine sensor or based on a supervisory system external command. While in the SUSPENDING state, the machine is typically brought to a controlled stop and then transitions to SUSPENDED upon state complete. To be able to restart production correctly after the SUSPENDED state, all relevant process set-points and return status of the procedures at the time of receiving the SUSPEND command must be saved in the machine controller when executing the SUSPENDING procedure.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -733,6 +781,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the SUSPENDING logic has been finished, the SUSPENDING STATE COMPLETE transition will be triggered and the machine will go into the SUSPENDED state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -740,8 +791,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition -->
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition">
-        <rdfs:comment>Description:
-The transitions classified as subclasses of transition, are the transitions that are used by table 2 (transition matrix of local or remote state commands) of ANSl/ISA-TR88.00.02-2015 and do indicate a transition between states.</rdfs:comment>
+        <rdfs:comment>A state transition is defined as a passage from one state to another. Transitions between states will occur as a result of a local, remote, or procedural state command.
+
+ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -756,6 +808,9 @@ The transitions classified as subclasses of transition, are the transitions that
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>In case of a HOLD due to internal reasons, the UNHOLD command may be initiated by an operator in case the reasons for a HOLD do no longer exist. The machine will continue to the UNHOLDING state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -778,8 +833,7 @@ The transitions classified as subclasses of transition, are the transitions that
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description: 
-Refer to HOLDING for when this state is used. A machine will typically enter into UNHOLDING automatically when INTERNAL conditions, material levels, for example, return to an acceptable level. If an operator is required to perform minor servicing to replenish materials or make adjustments, then the UNHOLD command may be initiated by the operator.
+        <rdfs:comment>Refer to HOLDING for when this state is used. A machine will typically enter into UNHOLDING automatically when INTERNAL conditions, material levels, for example, return to an acceptable level. If an operator is required to perform minor servicing to replenish materials or make adjustments, then the UNHOLD command may be initiated by the operator.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -796,6 +850,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the UNHOLDING logic has been finished, the UNHOLDING STATE COMPLETE transition will be triggered and the machine will go back into EXECUTE state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -810,6 +867,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>In case of a SUSPEND due to extenal reasons, the UNSUSPEND command may be initiated as soon as process conditions go back to normal. The machine will continue to the UNSUSPENDING state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -832,8 +892,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Description:
-Refer to SUSPENDING for when this state is used. This state is a result of process conditions returning to normal. The UNSUSPENDING state initiates any required actions or sequences necessary to transition the machine from SUSPENDED back to EXECUTE. To be able to restart production correctly after the SUSPENDED state, all relevant process set- points and return status of the procedures at the time of receiving the SUSPEND command must be saved in the machine controller when executing the SUSPENDING procedure.
+        <rdfs:comment>Refer to SUSPENDING for when this state is used. This state is a result of process conditions returning to normal. The UNSUSPENDING state initiates any required actions or sequences necessary to transition the machine from SUSPENDED back to EXECUTE. To be able to restart production correctly after the SUSPENDED state, all relevant process set- points and return status of the procedures at the time of receiving the SUSPEND command must be saved in the machine controller when executing the SUSPENDING procedure.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
@@ -850,6 +909,9 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As soon as the UNSUSPENDING logic has been finished, the UNSUSPENDING STATE COMPLETE transition will be triggered and the machine will go back into EXECUTE state.
+
+ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
     
 
@@ -858,8 +920,7 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
-        <rdfs:comment>Description:
-A state used to identify that a machine has achieved a defined set of conditions. In such a state, the machine is maintaining a status until transitioning to an acting state. In ANSl/ISA-88.00.01 this was referred to as a &quot;final&quot; or &quot;quiescent&quot; state.
+        <rdfs:comment>A state used to identify that a machine has achieved a defined set of conditions. In such a state, the machine is maintaining a status until transitioning to an acting state. In ANSl/ISA-88.00.01 this was referred to as a &quot;final&quot; or &quot;quiescent&quot; state.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     </owl:Class>
