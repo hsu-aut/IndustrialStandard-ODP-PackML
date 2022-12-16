@@ -18,13 +18,25 @@ This repository contains an ontology of ISA88 which is a standard to describe pr
 
 ## ISA88
 
-The ANSl/ISA-TR88.00.02-2015 [1] technical report is intended to build upon and formalize the concepts of the PackML guidelines 
+The ANSI/ISA-TR88.00.02-2015 [1] technical report is intended to build upon and formalize the concepts of the PackML guidelines 
 and to show application examples. PackML is used to provide a standard description of states for comparison of machine statuses 
 among different types of machines. The concepts used in this standard describe general states and transitions of a 
 packaging machine, but could be used to describe the states and transitions of any machine. This is due to the reason, 
-that the state machine is very generic and does not hold any concept specific to packaging machines.
+that the state machine is very generic and does not contain any concept specific to packaging machines.
 
-There are mainly three separate state machines (see Fig. 1):
+Figure 1 shows all classes along with their subclasses of this ODP. A `StateMachine` individual is used as kind of a container for all states and transitions, which are connected to a  state machine via `consistsOfState` and `consistsOfTransition`, respectively. Accordin to ISA 88, there are two types of states, so called `Acting` and `Wait` states. While Acting States are states in which some kind of logic is executed, Wait States signal that a certain condition has been achieved and that the state machine is now awaiting an input to further proceed. 
+Accordingly, there are two types of transitions: While a `Command` needs to be actively invoked by an operator or another system, a `StateComplete` is automatically triggered by completion of the previous state. A `StateComplete` almost always leads from an `Acting` into a `Wait` State. 
+In order to correctly model the state machine as an ontology, the four transitions `hasOutgoingTransition`,  `hasIncomingTransition`, `hasSourceState` and `hasTargetState` need to be used. The first two connect states with transitions. While `hasOutgoingTransition` always connects a state with the following transition, `hasIncomingTransition` is used to relate a state to the transition(s) leading to this state (i.e., its predecessor transitions).
+The latter two connect transition with states. While `hasSourceState` always connects a transition with its source state, `hasTargetState` connects transitions with their target state.
+Two of these four transitions may be considered "syntactical sugar", as `hasOutgoingTransition` is the inverse of `hasSourceState` and `hasIncomingTransition` is the inverse of `hasTargetState`.
+
+<p align="center">
+    <img width="60%" src="./pictures/ISA88_ClassDiagram.png?raw=true"><br>
+Figure 1: Class diagram showing all classes and object properties of the ISA 88 ODP
+</p>
+
+
+There are mainly three separate state machines (see Fig. 2):
 * Active, with two main sub-states:
   * Acting state: States which represents some processing activity
   * Wait state: States used to identify that a machine has achieved a defined set of conditions
@@ -33,20 +45,29 @@ There are mainly three separate state machines (see Fig. 1):
 
 A detailed description of all states can be found in the rdfs:comment of the ODP or the standard [ANSl/ISA ANSl/ISA-TR88.00.02-2015].
 
-![](./pictures/ISA88_SM1.png?raw=true "ISA 88 State Machine")<br></br>
-Figure 1: PackML state machine overview
+<p align="center">
+    <img width="60%" src="./pictures/ISA88_SM1.png?raw=true"><br>
+Figure 2: PackML state machine overview
+</p>
 
-Fig. 2 shows the states that are contained within the “Active” state machine of Fig. 1. The state machine contains PackML 
+Fig. 3 shows the states that are contained within the “Active” state machine of Fig. 2. The state machine contains PackML 
 defined states and transitions. Transitions called „SC“ do fire as soon as the state is complete. The state „Held“ represents 
 the interrupt of executing because of internal disturbances, while the „Suspended“ state reflects the interrupt because of 
 external disturbances.
 
-![](./pictures/ISA88_SM2.png?raw=true "ISA 88 State Machine")<br></br>
-Figure 2: PackML main state machine
+<p align="center">
+    <img width="100%" src="./pictures/ISA88_SM2.png?raw=true"><br>
+	Figure 3: PackML main state machine
+</p>
+
 
 Exemplary Competency Questions that could be answered with this ODP:<br></br>
-Table 1: Example Competency Questions
-![](./pictures/ISA88_exCQ.png?raw=true "exampleCQ")
+
+<p align="center">
+	Table 1: Example Competency Questions<br>
+    <img width="100%" src="./pictures/ISA88_exCQ.png?raw=true"><br>
+	Figure 3: PackML main state machine
+</p>
 
 [1] ANSl/ISA-TR88.00.02-2015] ANSl/ISA-TR88.00.02-2015. Machine and Unit States: 
 An implementation example of ANSl/ISA-88.00.01, 02.2015.
@@ -59,7 +80,7 @@ An example of an imports section looks like this:
 ```xml
 <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/capability-model#">
     <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/capability-model/1.0.0#"/>
-    <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-ISA88/v1.4.2/ISA88.owl"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/hsu-aut/IndustrialStandard-ODP-ISA88/v2.0.0/ISA88.owl"/>
 </owl:Ontology>
 ```
 Of course you can also clone or download this repository and import an ODP from a local copy. The advantage of the first approach is that tools like Protégé or TopBraid Composer will directly use the ontologies from the internet and you can simply increase the version number in case you want to use a newer version of our ODPs.
