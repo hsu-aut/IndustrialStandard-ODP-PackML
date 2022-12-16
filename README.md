@@ -31,7 +31,7 @@ The latter two connect transition with states. While `hasSourceState` always con
 Two of these four transitions may be considered "syntactical sugar", as `hasOutgoingTransition` is the inverse of `hasSourceState` and `hasIncomingTransition` is the inverse of `hasTargetState`.
 
 <p align="center">
-    <img width="60%" src="./pictures/ISA88_ClassDiagram.png?raw=true"><br>
+    <img width="80%" src="./pictures/ISA88_ClassDiagram.png?raw=true"><br>
 Figure 1: Class diagram showing all classes and object properties of the ISA 88 ODP
 </p>
 
