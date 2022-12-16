@@ -1,0 +1,398 @@
+@prefix : <http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#> .
+@prefix ex: <http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.hsu-ifa.de/ontologies/ISA-TR88-Example> .
+
+<http://www.hsu-ifa.de/ontologies/ISA-TR88-Example> rdf:type owl:Ontology ;
+                                                     owl:versionIRI <http://www.hsu-ifa.de/ontologies/ISA-TR88-Example/2.0.0> ;
+                                                     owl:imports <https://github.com/hsu-aut/IndustrialStandard-ODP-ISA88/blob/v2.0.0/ISA88.owl> ;
+                                                     rdfs:comment """This is an example of how to use the ISA 88 ontology. This ontology imports the ISA 88 ontology and defines an examplary set of individuals.
+This ontology's version iri indicates compatibility with the ISA 88 ontology (e.g. 2.0.0 of this example is based on the ISA 88 ontology in v 2.0.0).""" ;
+                                                     owl:versionInfo "2.0.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command> rdf:type owl:Class .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete
+<http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine
+ex:CoffeeMachine_StateMachine rdf:type owl:NamedIndividual ,
+                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> ;
+                              <http://www.hsu-ifa.de/ontologies/ISA-TR88#consistsOfState> ex:CoffeeMachine_StateMachine_Aborted ,
+                                                                                          ex:CoffeeMachine_StateMachine_Aborting ,
+                                                                                          ex:CoffeeMachine_StateMachine_Clearing ,
+                                                                                          ex:CoffeeMachine_StateMachine_Complete ,
+                                                                                          ex:CoffeeMachine_StateMachine_Completing ,
+                                                                                          ex:CoffeeMachine_StateMachine_Execute ,
+                                                                                          ex:CoffeeMachine_StateMachine_Held ,
+                                                                                          ex:CoffeeMachine_StateMachine_Holding ,
+                                                                                          ex:CoffeeMachine_StateMachine_Idle ,
+                                                                                          ex:CoffeeMachine_StateMachine_Resetting ,
+                                                                                          ex:CoffeeMachine_StateMachine_Starting ,
+                                                                                          ex:CoffeeMachine_StateMachine_Stopped ,
+                                                                                          ex:CoffeeMachine_StateMachine_Stopping ,
+                                                                                          ex:CoffeeMachine_StateMachine_Suspended ,
+                                                                                          ex:CoffeeMachine_StateMachine_Suspending ,
+                                                                                          ex:CoffeeMachine_StateMachine_Unholding ,
+                                                                                          ex:CoffeeMachine_StateMachine_Unsuspending ;
+                              <http://www.hsu-ifa.de/ontologies/ISA-TR88#consistsOfTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Aborting_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Clear_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Clearing_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Completing_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Execute_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Hold_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Holding_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Reset_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Resetting_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Start_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Starting_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Stopping_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Suspend_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Suspending_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Un_Hold_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Unholding_State_Complete ,
+                                                                                               ex:CoffeeMachine_StateMachine_Unsuspend_Command ,
+                                                                                               ex:CoffeeMachine_StateMachine_Unsuspending_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Abort_Command
+ex:CoffeeMachine_StateMachine_Abort_Command rdf:type owl:NamedIndividual ,
+                                                     <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command> ;
+                                            <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Aborting .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Aborted
+ex:CoffeeMachine_StateMachine_Aborted rdf:type owl:NamedIndividual ,
+                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted> ;
+                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Clear_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Aborting
+ex:CoffeeMachine_StateMachine_Aborting rdf:type owl:NamedIndividual ,
+                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting> ;
+                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Aborting_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Aborting_State_Complete
+ex:CoffeeMachine_StateMachine_Aborting_State_Complete rdf:type owl:NamedIndividual ,
+                                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete> ;
+                                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Aborted .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Clear_Command
+ex:CoffeeMachine_StateMachine_Clear_Command rdf:type owl:NamedIndividual ,
+                                                     <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command> ;
+                                            <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Clearing .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Clearing
+ex:CoffeeMachine_StateMachine_Clearing rdf:type owl:NamedIndividual ,
+                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing> ;
+                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                         ex:CoffeeMachine_StateMachine_Clearing_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Clearing_State_Complete
+ex:CoffeeMachine_StateMachine_Clearing_State_Complete rdf:type owl:NamedIndividual ,
+                                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete> ;
+                                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Stopped .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Complete
+ex:CoffeeMachine_StateMachine_Complete rdf:type owl:NamedIndividual ,
+                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete> ;
+                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                         ex:CoffeeMachine_StateMachine_Reset_Command ,
+                                                                                                         ex:CoffeeMachine_StateMachine_Stop_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Completing
+ex:CoffeeMachine_StateMachine_Completing rdf:type owl:NamedIndividual ,
+                                                  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing> ;
+                                         <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                           ex:CoffeeMachine_StateMachine_Completing_State_Complete ,
+                                                                                                           ex:CoffeeMachine_StateMachine_Stop_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Completing_State_Complete
+ex:CoffeeMachine_StateMachine_Completing_State_Complete rdf:type owl:NamedIndividual ,
+                                                                 <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete> ;
+                                                        <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Execute
+ex:CoffeeMachine_StateMachine_Execute rdf:type owl:NamedIndividual ,
+                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute> ;
+                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Execute_State_Complete ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Hold_Command ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Suspend_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Execute_State_Complete
+ex:CoffeeMachine_StateMachine_Execute_State_Complete rdf:type owl:NamedIndividual ,
+                                                              <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete> ;
+                                                     <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Completing .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Held
+ex:CoffeeMachine_StateMachine_Held rdf:type owl:NamedIndividual ,
+                                            <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held> ;
+                                   <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                     ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                                     ex:CoffeeMachine_StateMachine_Un_Hold_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Hold_Command
+ex:CoffeeMachine_StateMachine_Hold_Command rdf:type owl:NamedIndividual ,
+                                                    <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command> ;
+                                           <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Holding .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Holding
+ex:CoffeeMachine_StateMachine_Holding rdf:type owl:NamedIndividual ,
+                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding> ;
+                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Holding_State_Complete ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Stop_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Holding_State_Complete
+ex:CoffeeMachine_StateMachine_Holding_State_Complete rdf:type owl:NamedIndividual ,
+                                                              <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete> ;
+                                                     <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Held .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Idle
+ex:CoffeeMachine_StateMachine_Idle rdf:type owl:NamedIndividual ,
+                                            <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle> ;
+                                   <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                     ex:CoffeeMachine_StateMachine_Start_Command ,
+                                                                                                     ex:CoffeeMachine_StateMachine_Stop_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Reset_Command
+ex:CoffeeMachine_StateMachine_Reset_Command rdf:type owl:NamedIndividual ,
+                                                     <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command> ;
+                                            <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Resetting .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Resetting
+ex:CoffeeMachine_StateMachine_Resetting rdf:type owl:NamedIndividual ,
+                                                 <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting> ;
+                                        <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                          ex:CoffeeMachine_StateMachine_Resetting_State_Complete ,
+                                                                                                          ex:CoffeeMachine_StateMachine_Stop_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Resetting_State_Complete
+ex:CoffeeMachine_StateMachine_Resetting_State_Complete rdf:type owl:NamedIndividual ,
+                                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete> ;
+                                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Idle .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Start_Command
+ex:CoffeeMachine_StateMachine_Start_Command rdf:type owl:NamedIndividual ,
+                                                     <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command> ;
+                                            <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Starting .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Starting
+ex:CoffeeMachine_StateMachine_Starting rdf:type owl:NamedIndividual ,
+                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting> ;
+                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                         ex:CoffeeMachine_StateMachine_Starting_State_Complete ,
+                                                                                                         ex:CoffeeMachine_StateMachine_Stop_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Starting_State_Complete
+ex:CoffeeMachine_StateMachine_Starting_State_Complete rdf:type owl:NamedIndividual ,
+                                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete> ;
+                                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Execute .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Stop_Command
+ex:CoffeeMachine_StateMachine_Stop_Command rdf:type owl:NamedIndividual ,
+                                                    <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command> ;
+                                           <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Stopping .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Stopped
+ex:CoffeeMachine_StateMachine_Stopped rdf:type owl:NamedIndividual ,
+                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped> ;
+                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                        ex:CoffeeMachine_StateMachine_Reset_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Stopping
+ex:CoffeeMachine_StateMachine_Stopping rdf:type owl:NamedIndividual ,
+                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping> ;
+                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                         ex:CoffeeMachine_StateMachine_Stopping_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Stopping_State_Complete
+ex:CoffeeMachine_StateMachine_Stopping_State_Complete rdf:type owl:NamedIndividual ,
+                                                               <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete> ;
+                                                      <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Stopped .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Suspend_Command
+ex:CoffeeMachine_StateMachine_Suspend_Command rdf:type owl:NamedIndividual ,
+                                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command> ;
+                                              <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Suspending .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Suspended
+ex:CoffeeMachine_StateMachine_Suspended rdf:type owl:NamedIndividual ,
+                                                 <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended> ;
+                                        <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                          ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                                          ex:CoffeeMachine_StateMachine_Unsuspend_Command .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Suspending
+ex:CoffeeMachine_StateMachine_Suspending rdf:type owl:NamedIndividual ,
+                                                  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending> ;
+                                         <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                           ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                                           ex:CoffeeMachine_StateMachine_Suspending_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Suspending_State_Complete
+ex:CoffeeMachine_StateMachine_Suspending_State_Complete rdf:type owl:NamedIndividual ,
+                                                                 <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete> ;
+                                                        <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Suspended .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Un_Hold_Command
+ex:CoffeeMachine_StateMachine_Un_Hold_Command rdf:type owl:NamedIndividual ,
+                                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command> ;
+                                              <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Unholding .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Unholding
+ex:CoffeeMachine_StateMachine_Unholding rdf:type owl:NamedIndividual ,
+                                                 <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding> ;
+                                        <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                          ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                                          ex:CoffeeMachine_StateMachine_Unholding_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Unholding_State_Complete
+ex:CoffeeMachine_StateMachine_Unholding_State_Complete rdf:type owl:NamedIndividual ,
+                                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete> ;
+                                                       <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Execute .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Unsuspend_Command
+ex:CoffeeMachine_StateMachine_Unsuspend_Command rdf:type owl:NamedIndividual ,
+                                                         <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command> ;
+                                                <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Unsuspending .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Unsuspending
+ex:CoffeeMachine_StateMachine_Unsuspending rdf:type owl:NamedIndividual ,
+                                                    <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending> ;
+                                           <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition> ex:CoffeeMachine_StateMachine_Abort_Command ,
+                                                                                                             ex:CoffeeMachine_StateMachine_Stop_Command ,
+                                                                                                             ex:CoffeeMachine_StateMachine_Unsuspending_State_Complete .
+
+
+###  http://www.hsu-ifa.de/ontologies/ISA-TR88-Example#CoffeeMachine_StateMachine_Unsuspending_State_Complete
+ex:CoffeeMachine_StateMachine_Unsuspending_State_Complete rdf:type owl:NamedIndividual ,
+                                                                   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete> ;
+                                                          <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState> ex:CoffeeMachine_StateMachine_Execute .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
