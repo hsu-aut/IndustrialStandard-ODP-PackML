@@ -30,6 +30,8 @@ In order to correctly model the state machine as an ontology, the four transitio
 The latter two connect transition with states. While `hasSourceState` always connects a transition with its source state, `hasTargetState` connects transitions with their target state.
 Two of these four transitions may be considered "syntactical sugar", as `hasOutgoingTransition` is the inverse of `hasSourceState` and `hasIncomingTransition` is the inverse of `hasTargetState`.
 
+Please see the file `ISA88-Example.ttl` for one complete ISA 88 state machine. You might think that this is a very verbose state machine for a coffee machine. This state machine was purposefully modeled to show a full state machine. Note that ISA 88 defines different so-called control "modes" that allow modeling less verbose state machines (e.g. for manual mode). See [1] for more information.
+
 <p align="center">
     <img width="80%" src="./pictures/ISA88_ClassDiagram.png?raw=true"><br>
 Figure 1: Class diagram showing all classes and object properties of the ISA 88 ODP
