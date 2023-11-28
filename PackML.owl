@@ -6,10 +6,10 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88">
-        <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88/2.0.0"/>
+    <owl:Ontology rdf:about="http://www.w3id.org/hsu-aut/PackML">
+        <owl:versionIRI rdf:resource="http://www.w3id.org/hsu-aut/PackML/3.0.0"/>
         <rdfs:isDefinedBy>ANSl/ISA-TR88.00.02-2015</rdfs:isDefinedBy>
-        <owl:versionInfo>2.0.0</owl:versionInfo>
+        <owl:versionInfo>3.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -25,63 +25,63 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#consistsOfState -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#consistsOfState -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#consistsOfState">
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine"/>
-        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/PackML#consistsOfState">
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateMachine"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
         <rdfs:comment>Defines that a State is part of a State Machine.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#consistsOfTransition -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#consistsOfTransition -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#consistsOfTransition">
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine"/>
-        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/PackML#consistsOfTransition">
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateMachine"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
         <rdfs:comment>Defines that a Transition is part of a State Machine.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#hasIncomingTransition -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#hasIncomingTransition -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasIncomingTransition">
-        <owl:inverseOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
-        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/PackML#hasIncomingTransition">
+        <owl:inverseOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
         <rdfs:comment>Describes the relationship between a state and it&apos;s incoming transition.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition">
-        <owl:inverseOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasSourceState"/>
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
-        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition">
+        <owl:inverseOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasSourceState"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
         <rdfs:comment>Describes the relationship between a state and it&apos;s outgoing transition.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#hasSourceState -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#hasSourceState -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasSourceState">
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
-        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/PackML#hasSourceState">
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
         <rdfs:comment>Describes the relationship between a transition and the State it originated in.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#hasTargetState -->
 
-    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState">
-        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
-        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/hsu-aut/PackML#hasTargetState">
+        <rdfs:domain rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
         <rdfs:comment>Describes the relationship between a transition and the State it ends in.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -98,14 +98,14 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#AbortCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Aborting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The ABORT command can be triggered at any time in order bring the state machine into ABORTING state.
@@ -115,14 +115,14 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Aborted -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Aborted">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearCommand"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#ClearCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The machine maintains status information relevant to the ABORT condition. The machine can only exit the ABORTED state after an explicit CLEAR command, subsequently to manual intervention to correct and reset the detected machine faults.
@@ -132,14 +132,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Aborting -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Aborting">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortingStateComplete"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#AbortingStateComplete"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The ABORTING state can be entered at any time in response to the ABORT command or on the occurrence of a machine fault. The aborting logic will bring the machine to a rapid safe stop.
@@ -149,14 +149,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#AbortingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Aborted"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>After the ABORTING logic has brought the machine to a safe stop, the ABORTING STATE COMPLETE transition will fire so that the machine ends in ABORTED state.
@@ -166,11 +166,11 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Acting -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
-        <owl:disjointWith rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Acting">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
+        <owl:disjointWith rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:comment>A state which represents some processing activity. It implies the single or repeated execution of processing steps in a logical order, for a finite time or until a specific condition has been reached. In ANSl/lSA-88.00.01 these are referred to transient states, those states ending in &quot;ING&quot;.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
@@ -178,14 +178,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#ClearCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#ClearCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Clearing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The CLEAR command may be used to clear faults that may have occurred during ABORTING in order to move to the STOPPED state.
@@ -195,18 +195,18 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Clearing -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Clearing">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#ClearingStateComplete"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -219,14 +219,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#ClearingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ClearingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#ClearingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Stopped"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as all faults have been cleared during CLEARING, this CLEARING STATE COMPLETE transition will be fired so that the machine ends up in STOPPED state.
@@ -236,10 +236,10 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Command -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Command -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Command">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
         <rdfs:comment>State commands are transitions that need to be actively triggered, e.g., by one of the following ways: Operator intervention, Response to the status of one or more procedural elements, Response to machine conditions, Supervisory or remote system intervention.
 
 ANSI/ISA-TR88.00.02-2015</rdfs:comment>
@@ -247,19 +247,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Complete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Complete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ResetCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#ResetCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -272,19 +272,19 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Completing -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Completing">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#CompletingStateComplete"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#CompletingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -297,14 +297,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#CompletingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#CompletingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#CompletingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#CompletingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Complete"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the completion logic has been finished, the COMPLETING STATE COMPLETE transition will be triggered. The machine will end in the COMPLETE state.
@@ -314,21 +314,21 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Execute -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Execute">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ExecuteStateComplete"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#HoldCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#SuspendCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#ExecuteStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#HoldCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#SuspendCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -341,14 +341,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#ExecuteStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#ExecuteStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ExecuteStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#ExecuteStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Completing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as normal operation was successfully finished, the machine will trigger the EXECUTE STATE COMPLETE transition to end in the COMPLETING state.
@@ -358,19 +358,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Held -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Held -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Held">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Held">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnholdCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#UnholdCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -383,14 +383,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#HoldCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#HoldCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#HoldCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#HoldCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Holding"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The HOLD command is used to hold production due to internal machine conditions.
@@ -400,19 +400,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Holding -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Holding">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#HoldingStateComplete"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#HoldingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -425,14 +425,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#HoldingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#HoldingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#HoldingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#HoldingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Held"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Held"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the HOLDING logic has been finished, the HOLDING STATE COMPLETE transition will be triggered and the machine will go into the HELD state.
@@ -442,19 +442,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Idle -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Idle">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StartCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StartCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -467,14 +467,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#ResetCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#ResetCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ResetCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#ResetCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Resetting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A RESET command will cause an exit from STOPPED to the RESETTING state.
@@ -484,19 +484,19 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Resetting -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Resetting">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ResettingStateComplete"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#ResettingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -509,14 +509,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#ResettingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#ResettingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ResettingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#ResettingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Idle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the RESETTING logic has been finished, the RESETTING STATE COMPLETE transition will be triggered and the machine will go into the IDLE state.
@@ -526,14 +526,14 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StartCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#StartCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StartCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#StartCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Starting"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The START command is the first step to begin execution. It will bring the state machine from IDLE to STARTING state.
@@ -543,19 +543,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Starting -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Starting">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StartingStateComplete"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StartingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -568,14 +568,14 @@ ANSl/ISA-TRBB.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StartingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#StartingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StartingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#StartingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Execute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the STARTING logic has been finished, the STARTING STATE COMPLETE transition will be triggered and the machine will go into the EXECUTE state.
@@ -585,9 +585,9 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#State -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#State -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#State">
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#State">
         <rdfs:comment>A unit/machine state completely defines the current condition of a machine. Two machine state types are defined: Acting states, which represent some processing activity. And Wait states which are used to identify that a machine has achieved a defined set of conditions.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
@@ -595,10 +595,10 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#StateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#StateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
         <rdfs:comment>A StateComplete is automatically triggered by the completion of an acting state. As a result, the state machine switches its current state to a Wait State.
 
 ANSI/ISA-TR88.00.02-2015</rdfs:comment>
@@ -606,23 +606,23 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#StateMachine -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine">
-        <owl:disjointWith rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#StateMachine">
+        <owl:disjointWith rdf:resource="http://www.w3id.org/hsu-aut/PackML#Transition"/>
         <rdfs:comment>To be used as a container for all states and transitions of a particular state machine.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#StopCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Stopping"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The STOP command triggers a controlled halt of a machine trough logic triggered in the STOPPING state.
@@ -632,18 +632,18 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Stopped -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Stopped">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#ResetCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#ResetCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -656,18 +656,18 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Stopping -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Stopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StoppingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StoppingStateComplete"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -680,14 +680,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#StoppingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#StoppingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StoppingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#StoppingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Stopped"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the STOPPING logic has been finished, the STOPPING STATE COMPLETE transition will be triggered and the machine will go into the STOPPED state.
@@ -697,14 +697,14 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#SuspendCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#SuspendCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#SuspendCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#SuspendCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Suspending"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The SUSPEND command is used to suspend production due to external machine conditions.
@@ -714,19 +714,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Suspended -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Suspended">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Wait"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnsuspendCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#UnsuspendCommand"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -740,19 +740,19 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Suspending -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Suspending">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#SuspendingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#SuspendingStateComplete"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -765,14 +765,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#SuspendingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#SuspendingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#SuspendingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#SuspendingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Suspended"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the SUSPENDING logic has been finished, the SUSPENDING STATE COMPLETE transition will be triggered and the machine will go into the SUSPENDED state.
@@ -782,9 +782,9 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Transition -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition">
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Transition">
         <rdfs:comment>A state transition is defined as a passage from one state to another. Transitions between states will occur as a result of a local, remote, or procedural state command.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
@@ -792,14 +792,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#UnholdCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#UnholdCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnholdCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#UnholdCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Unholding"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>In case of a HOLD due to internal reasons, the UNHOLD command may be initiated by an operator in case the reasons for a HOLD do no longer exist. The machine will continue to the UNHOLDING state.
@@ -809,19 +809,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Unholding -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Unholding">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnholdingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#UnholdingStateComplete"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -834,14 +834,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#UnholdingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#UnholdingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnholdingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#UnholdingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Execute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the UNHOLDING logic has been finished, the UNHOLDING STATE COMPLETE transition will be triggered and the machine will go back into EXECUTE state.
@@ -851,14 +851,14 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#UnsuspendCommand -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#UnsuspendCommand -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnsuspendCommand">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Command"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#UnsuspendCommand">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Command"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Unsuspending"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>In case of a SUSPEND due to extenal reasons, the UNSUSPEND command may be initiated as soon as process conditions go back to normal. The machine will continue to the UNSUSPENDING state.
@@ -868,19 +868,19 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Unsuspending -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Acting"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Unsuspending">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#Acting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasOutgoingTransition"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasOutgoingTransition"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#AbortCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#StopCommand"/>
-                            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnsuspendingStateComplete"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#AbortCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#StopCommand"/>
+                            <rdf:Description rdf:about="http://www.w3id.org/hsu-aut/PackML#UnsuspendingStateComplete"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -893,14 +893,14 @@ ANSl/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#UnsuspendingStateComplete -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#UnsuspendingStateComplete -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#UnsuspendingStateComplete">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#StateComplete"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#UnsuspendingStateComplete">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#StateComplete"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTargetState"/>
-                <owl:allValuesFrom rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/hsu-aut/PackML#hasTargetState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/hsu-aut/PackML#Execute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>As soon as the UNSUSPENDING logic has been finished, the UNSUSPENDING STATE COMPLETE transition will be triggered and the machine will go back into EXECUTE state.
@@ -910,10 +910,10 @@ ANSI/ISA-TR88.00.02-2015</rdfs:comment>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait -->
+    <!-- http://www.w3id.org/hsu-aut/PackML#Wait -->
 
-    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA-TR88#Wait">
-        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA-TR88#State"/>
+    <owl:Class rdf:about="http://www.w3id.org/hsu-aut/PackML#Wait">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/hsu-aut/PackML#State"/>
         <rdfs:comment>A state used to identify that a machine has achieved a defined set of conditions. In such a state, the machine is maintaining a status until transitioning to an acting state. In ANSl/ISA-88.00.01 this was referred to as a &quot;final&quot; or &quot;quiescent&quot; state.
 
 ANSl/ISA-TR88.00.02-2015</rdfs:comment>
