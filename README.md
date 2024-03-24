@@ -62,11 +62,15 @@ external disturbances.
 
 Exemplary Competency Questions that could be answered with this ODP:<br></br>
 
-<p align="center">
-	Table 1: Example Competency Questions<br>
-    <img width="100%" src="./pictures/PackML_exCQ.png?raw=true"><br>
-	Figure 3: PackML main state machine
-</p>
+Table 1: Example Competency Questions<br>
+|  ID  | Competency Question | Answer | Restrictions / Notes |
+|:----:|:-------------------:|:------:|:------------:|
+|  1   | What's the current state of machine X? | Current state of the machine (e.g., Idle) |    |
+|  2   | Why is machine X not in state Execute  | <ul><li>Machine X went from Execute to Held due to an internal issue</li><li>Machine X went from Execute to Suspended due to an external issue</li><li>Machine X went from Execute to Stopped due to a Stop command</li><li>Machine X went from Execute to Aborted due to an Abort command</li></ul> |    |
+|  3   | Which machines are in Idle right now? | List of machines in Idle | May need separate ODP to model machines |
+|  4   | What are possible states of machine X? | List of possible states | Useful if a subset of the full PackML SM is used |
+|  5   | How much time did machine X spend in Idle? | Duration spend in Idle | Needs an ODP to model time and / or application to track state changes |
+|  6   | For a given time frame, what was the availability of machine X? | Availability as a time or percentage (e.g. by looking at time spent in "normal" states) | Needs an ODP to model time and / or application to track state changes |
 
 [1] ANSl/ISA-TR88.00.02-2015] ANSl/ISA-TR88.00.02-2015. Machine and Unit States: 
 An implementation example of ANSl/ISA-88.00.01, 02.2015.
